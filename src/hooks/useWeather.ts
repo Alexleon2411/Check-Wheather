@@ -46,6 +46,7 @@ export default function useWeather() {
       const result =  parse(WeatherSchema, weatherResult)
       if(result) {
         setWeather(result)
+        setNotFound(false)
       }
     } catch (error) {
       console.log(error)
